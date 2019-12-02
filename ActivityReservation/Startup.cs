@@ -131,9 +131,9 @@ namespace ActivityReservation
             eventBus.Subscribe<OperationLogEvent, OperationLogEventHandler>(); // 注册操作日志 Event
             eventBus.Subscribe<NoticeViewEvent, NoticeViewEventHandler>(); // 公告
 
-            LogHelper.LogFactory.AddLog4Net();
+            //LogHelper.LogFactory.AddLog4Net();
 
-            loggerFactory.AddLog4Net();
+            //loggerFactory.AddLog4Net();
 
             app.UseCustomExceptionHandler();
             app.UseHealthCheck("/health");

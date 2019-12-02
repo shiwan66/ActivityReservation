@@ -310,7 +310,7 @@ namespace ActivityReservation.AdminLogic.Controllers
         [AllowAnonymous]
         public ActionResult ValidUsername(string userName)
         {
-            return Json(_bLLUser.Exist(s => s.UserName == userName));
+            return Json(!_bLLUser.Exist(s => s.UserName == userName));
         }
 
         /// <summary>
@@ -321,7 +321,7 @@ namespace ActivityReservation.AdminLogic.Controllers
         [HttpPost]
         public ActionResult ValidUserMail(string userMail)
         {
-            return Json(_bLLUser.Exist(s => s.UserMail == userMail));
+            return Json(!_bLLUser.Exist(s => s.UserMail == userMail));
         }
 
         /// <summary>
