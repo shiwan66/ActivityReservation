@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: "https://reservation.weihanli.xyz"
+  apiBaseUrl: "https://localhost:44352"
 };
 
 /*

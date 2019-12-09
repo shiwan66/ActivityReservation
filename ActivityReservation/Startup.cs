@@ -149,10 +149,10 @@ namespace ActivityReservation
             });
 
             // DataProtection persist in redis
-            services.AddDataProtection()
-                .SetApplicationName(ApplicationHelper.ApplicationName)
-                .PersistKeysToStackExchangeRedis(() => DependencyResolver.Current.ResolveService<IConnectionMultiplexer>().GetDatabase(5), "DataProtection-Keys")
-                ;
+            //services.AddDataProtection()
+            //    .SetApplicationName(ApplicationHelper.ApplicationName)
+            //    .PersistKeysToStackExchangeRedis(() => DependencyResolver.Current.ResolveService<IConnectionMultiplexer>().GetDatabase(5), "DataProtection-Keys")
+            //    ;
             services.AddSingleton<IEventBus, RedisEventBus>();
             services.AddSingleton<IEventStore, EventStoreInRedis>();
 
